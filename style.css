@@ -1,0 +1,611 @@
+/*===================== MARGINS DA PAGINA TODA========================== */
+* {
+  margin: 0; 
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 75%;
+  height: auto;
+}
+
+section {
+  padding: none vb   ;
+}
+
+/*===================== FONTE DA PAGE=================================*/
+:root {
+  --header-height: 4.5rem;
+  --hue: 159;
+  --base-color: hsl(var(--hue) 36% 57%);
+  --base-color-second: hsl(var(--hue) 65% 88%);
+  --base-color-alt: hsl(var(--hue) 57% 53%);
+  --title-color: hsl(var(--hue) 41% 10%);
+  --text-color: hsl(0 0% 46%);
+  --text-color-light: hsl(0 0% 98%);
+  --body-color: hsl(0 0% 98%);
+}
+
+/*===================== FONTE DA PAGE LETRAS=================================*/
+body {
+ font: 400 1rem 'DM Sans', sans-serif;
+ color: var(--text-color);
+ background: var(--body-color);
+ -webkit-font-smoothing: antialiased;
+ overflow-x: hidden;
+}
+
+.title{
+  position: relative;
+  font: 700 1.875rem 'Poppins', sans-serif;
+  color: var(--title-color);
+ -webkit-font-smoothing: auto;
+  top: -10rem;
+}
+
+/*===================== FONTE DO TITULO DA SEGUNDA SECTION=================================*/
+.title1{
+  font: 700 1.875rem 'Poppins', sans-serif;
+  text-align: center;
+  color: black;
+  margin-top: -3rem;
+  margin-bottom: 4rem;
+}
+
+.button{
+  background-color: rgb(158, 0, 0);
+  color: var(--text-color-light);
+  height: 3.5rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 2rem;
+  border-radius: .50rem;
+  font: 500 1rem 'DM Sans', sans-serif;
+  transition: background 0.4s;
+}
+
+.button:hover{
+  background: rgb(218, 100, 100);
+}
+
+/*===================== FECHAMENTO DE CADA SEÇAO=================================*/
+.divider-1 {
+ height: 1px;
+ background: linear-gradient(
+  270deg,
+  hsla(var(--hue), 36%, 57%, 1) 0%,
+  hsla(var(--hue), 65%, 88%, 0.34) 100%
+ );
+}
+
+.divider-2 {
+  margin-top: 2rem;
+  height: 1px;
+ background: linear-gradient(
+  270deg,
+  hsla(var(--hue), 36%, 57%, 1) 0%,
+  hsla(var(--hue), 65%, 88%, 0.34) 100%
+ );
+}
+
+/*===================== HEADER LOGO E O MENU=================================*/
+#header {
+  border-bottom: 1px solid #e4e4e4;
+  margin-bottom: 2rem;
+ display: flex;
+
+ width: 100%;
+ position: fixed;
+ top: 0;
+ left: 0;
+ z-index: 100;
+ background-color: var(--body-color);
+
+}
+
+nav {
+  height: var(--header-height);
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ justify-content: space-between;
+ width: 100%;
+
+}
+
+.baixo {
+  position: relative;
+  color: rgb(255, 255, 255);
+  font-size: 3rem;
+  cursor: pointer;
+  margin: -1.1rem;
+}
+/*===================== MENU ========================== */
+
+
+nav ul li {
+  text-align: center;
+}
+
+nav ul li a {
+  transition: color 0.35s;
+  position: relative;
+  top: -12.5rem;
+}
+
+nav ul li a:hover {
+ color: rgb(158, 0, 0);
+}
+
+nav ul li a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: rgb(158, 0, 0);
+
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+  
+  transition: width .3s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav .menu {
+  opacity: 0;
+  visibility: hidden;
+  background: u;
+}
+/*=== mostrar o menu*/
+nav.show .menu {
+  opacity: 1;
+  visibility: visible;
+                               /*====== fundo do menu*/
+  background: url(https://i.pinimg.com/736x/10/70/e0/1070e04a25581e007bdc44072e390843.jpg);
+  height: 100vh;
+  width: 100vw;
+ 
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+nav.show .lado {
+  position: relative;
+  top: 15rem;
+  right: 5rem
+}
+
+nav.show .menu {
+  display: grid;
+  place-content: center;
+}
+
+nav.show ul.grid { 
+  gap: 4rem;
+}
+
+/*===================== LIGAR E DESLIGAR MENU========================== */
+.toggle {
+  position: relative;
+  color: rgb(158, 0, 0);
+  font-size: 2.2rem;
+  cursor: pointer;
+  right: 22rem;
+  gap: 10;
+}
+
+nav .icon-close {
+  visibility: hidden;
+  opacity: 0;
+
+  position: absolute;
+  right: 1.5rem;
+  
+}
+
+nav.show div.icon-close {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*===================== LOGO DO SITE========================== */
+.logo {
+  font: 700 1.31rem 'Poppins', sans-serif;
+  color: var(--title-color);
+}
+
+.logo span{
+  color: rgb(158, 0, 0);
+}
+/*===================== MARGINS DA PAGINA TODA========================== */
+
+.container {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.section {
+  padding: 5rem 0;
+
+}
+
+/*===================== HOME PRIMEIRA SEÇÃO DO SITE========================== */
+main {
+margin-top: calc(var(--header-height) + 2rem) ;
+}
+
+#home {
+  overflow: hidden;
+}
+
+#home .container {
+  margin: 0;
+}
+
+#home .image {
+  position: relative;
+}
+
+.img{
+  transition: all .5s;
+  border: 5px solid #eeeeee;
+}
+
+.img:hover {
+  border: 5px solid #781f40;
+    border-radius: 50%;
+    -webkit-filter: drop-shadow(15px 7px 1px rgba(0,0,0,.5));
+    filter: drop-shadow(15px 7px 1px rgba(0,0,0,.5));
+    -webkit-transform: rotateZ(-360deg) scale(1.2);
+    transform: rotateZ(-360deg) scale(1.1);
+}
+
+#home .image::before{
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: rgb(201, 201, 201);;
+  position: absolute;
+  top: -16.8%;
+  left: 16.7%;
+  z-index: 0;
+}
+
+#home .image img {
+  position: relative;
+  right: -1rem;
+}
+
+#home .image img,
+#home .image::before {
+  border-radius: 0.50rem;
+}
+
+#home .text {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  text-align: center;
+}
+
+
+#home .text h1 {
+  margin-bottom: 1rem;
+}
+
+#home .text p {
+  margin-bottom: 2rem;
+  max-width: 100%;
+}
+
+/*===================== IMAGENS DA SEGUNDA SECTION========================== */
+
+
+.section1 {
+  position: relative;
+  margin-top: 3rem;
+   }
+
+.imagens {
+  padding-bottom:3.5rem;
+  position: relative;
+  width: 40%;
+  display: flex;
+  gap: 5rem;
+  left: 3rem;
+}
+
+.image1 {
+  
+  transition: all 0.5s;
+    cursor: pointer;
+}
+
+.image1:hover {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+.image2 {
+  transition: all 0.5s;
+    cursor: pointer;
+}
+
+.image2:hover {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+.image3 {
+  transition: all 0.5s;
+    cursor: pointer;
+}
+
+.image3:hover {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+.image4 {
+  transition: all 0.5s;
+    cursor: pointer;
+}
+
+.image4:hover {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+.image5 {
+  transition: all 0.5s;
+    cursor: pointer;
+}
+
+.image5:hover {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+.image6 {
+  transition: all 0.5s;
+    cursor: pointer;
+}
+
+.image6:hover {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+.imagens2{
+  padding-bottom:3.5rem;
+  position: relative;
+  width: 40%;
+  display: flex;
+  gap: 5rem;
+  left: 3rem;
+}
+
+
+.imagens3{
+  position: relative;
+  width: 40%;
+  display: flex;
+  gap: 5rem;
+  left: 3rem;
+}
+
+/*===================== TERCEIRA INDIQUE SECTION========================== */
+#indicate {
+  overflow: hidden;
+}
+#indicate .container {
+  margin: 0;
+}
+
+#indicate .image {
+  position: relative;
+}
+
+.imag {
+  transition: all .5s;
+    border: 5px solid #eeeeee;
+}
+
+.imag:hover{
+  border: 5px solid #781f40;
+  border-radius: 50%;
+  -webkit-filter: drop-shadow(15px 7px 1px rgba(0,0,0,.5));
+  filter: drop-shadow(15px 7px 1px rgba(0,0,0,.5));
+  -webkit-transform: rotateZ(-360deg) scale(1.1);
+  transform: rotateZ(-360deg) scale(1.1);
+}
+
+#indicate .image::before{
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: rgb(201, 201, 201);;
+  position: absolute;
+  top: -16.8%;
+  left: 16.7%;
+  z-index: 0;
+}
+
+#indicate .image img {
+  position: relative;
+  right: -1rem;
+}
+
+#indicate .image img,
+#indicate .image::before {
+  border-radius: 0.50rem;
+}
+
+#indicate .text {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  text-align: center;
+}
+
+
+#indicate .text h1 {
+  margin-bottom: 1rem;
+}
+
+#indicate .text p {
+  margin-bottom: 2rem;
+  max-width: 100%;
+}
+
+/*===================== QUARTA SECTION SOBRE========================== */
+.vendas2 {
+  position: relative;
+  color: black;
+  left: 24rem;
+  top: -13rem;
+  font: 600 1rem 'Poppins', sans-serif;
+}
+
+.vendas1 {
+  position: relative;
+  color: black;
+  left: 15rem;
+  top: -9.9rem;
+  font: 600 1rem 'Poppins', sans-serif;
+}
+
+
+.vendas {
+  position: relative;
+  color: black;
+  right: 6.1rem;
+  top: -8rem;
+  text-align: center;
+  font: 600 1rem 'Poppins', sans-serif;
+}
+
+.titulo {
+  position: relative;
+  color: black;
+  text-align: center;
+  top: -4rem;
+}
+
+.venda {
+  background-color: rgb(223, 223, 223);
+  color: rgb(0, 0, 0);
+  height: 3rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 1.7rem;
+  border: none;
+  border-radius: 20rem;
+  font: 500 1rem 'DM Sans', sans-serif;
+  position: relative;
+  left: 5.7rem;
+  top: -13rem;
+} 
+
+#about .title2 {
+  font: 700 1.875rem 'Poppins', sans-serif;
+  text-align: center;
+  color: black;
+  margin-top: -3rem;
+  margin-bottom: 4rem;
+  position: relative;
+  right: -1rem;
+}
+
+#about .text {
+  text-align: center;
+  margin: 1.2rem;
+  position: relative;
+  top: -10rem;
+}
+
+#about .title {
+  font:600 1.5rem 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.paulo {
+  position: relative;
+  width: 60%;
+  margin-top: -7rem;
+  right: 5rem;
+  transition: all 0.5s;
+    cursor: pointer;
+}
+
+.paulo:hover{
+  -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+  filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+}
+
+/*===================== FOOTER========================== */
+.logo1 {
+  font: 700 1.31rem 'Poppins', sans-serif;
+  color: var(--title-color);
+}
+
+.logo2 {
+  color: #e4e4e4;
+}
+
+
+footer {
+  display: inline-block;
+  background: #781f40;
+  padding-bottom: 0;
+}
+
+.texte {
+  position: relative;
+  color: #eeeeee;
+  top: -3rem;
+  left: 2.5rem;
+}
+
+.paulinho {
+  position: relative;
+  width: 55%;
+  right: 4rem;
+}
+
+.venha {
+  font: 400 2rem 'Oleo Script Swash Caps', sans-serif;
+  color: #eeeeee;
+  position: relative;
+  text-align: center;
+   top: -10rem;
+}
+
+
+/*===================== REPONSIVO========================== */
+
+
+@media screen and (max-width: 300px) {
+ /* estilos */
+}
+@media screen and (max-width: 600px) {
+/* Estilos */
+}
+
